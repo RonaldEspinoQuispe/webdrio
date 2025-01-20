@@ -47,6 +47,14 @@
          run: |
            npx allure generate allure-results --clean  # Genera el reporte de Allure
           
+       - name: Start Allure server (Docker)
+         run: |
+           docker pull frankesc/docker-allure-server
+           docker run -d -p 5050:5050 -v $(pwd)/allure-report:/app/allure-report frankesc/docker-allure-server
+     
+       - name: Wait for Allure server to start
+         run: sleep 10  # Espera para que el servidor se inicie
+
        - name: Upload Allure results as artifact
          uses: actions/upload-artifact@v4
          with:
