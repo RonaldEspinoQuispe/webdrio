@@ -53,7 +53,7 @@ export const config: WebdriverIO.Config = {
     //
     capabilities: [{
         browserName: 'chrome',
-         /*'goog:chromeOptions': { // Opciones específicas de Chrome
+         'goog:chromeOptions': { // Opciones específicas de Chrome
             binary: '/usr/bin/google-chrome',  // Ubicación del binario de Chrome
             args: [
                 '--headless',             // Ejecutar en modo headless (sin interfaz gráfica)
@@ -62,7 +62,7 @@ export const config: WebdriverIO.Config = {
                 '--disable-dev-shm-usage', // Requerido en contenedores y entornos CI
                 '--remote-debugging-port=9222',  // Habilitar el puerto de depuración remota (por si es necesario)
             ]
-            }*/ 
+            }
     }],
 
     //
