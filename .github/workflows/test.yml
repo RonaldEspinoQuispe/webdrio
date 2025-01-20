@@ -42,3 +42,14 @@
        - name: Run WebDriverIO tests
          run: |
            npx wdio run wdio.conf.ts
+
+       - name: Generate Allure report
+         run: |
+          npm install allure-commandline --save-dev  # Instala Allure si es necesario
+          npx allure generate allure-results --clean  # Genera el reporte de Allure
+
+       - name: Upload Allure report as artifact
+         uses: actions/upload-artifact@v2
+         with:
+           name: allure-report
+           path: allure-report  # Subir el reporte generado como artefacto
