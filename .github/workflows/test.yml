@@ -49,7 +49,7 @@
           npx allure generate allure-results --clean  # Genera el reporte de Allure
 
        - name: Upload Allure report as artifact
-         uses: actions/upload-artifact@v2
+         uses: actions/upload-artifact@v3
          with:
            name: allure-report
-           path: allure-report  # Subir el reporte generado como artefacto
+           path: allure-results  # Subir el reporte generado como artefacto
