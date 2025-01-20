@@ -31,4 +31,4 @@
 
        - name: Run WebDriverIO tests
          run: |
-           npx wdio run wdio.conf.ts
+           npx wdio run wdio.conf.js
