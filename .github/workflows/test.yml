@@ -45,10 +45,8 @@
 
        - name: Generate Allure report
          run: |
-          npm install allure-commandline --save-dev  # Instala Allure si es necesario
-          npx allure generate allure-results --clean  # Genera el reporte de Allure
-          #npx allure open
-
+           npx allure generate allure-results --clean  # Genera el reporte de Allure
+          
        - name: Upload Allure report as artifact
          uses: actions/upload-artifact@v4
          with:
