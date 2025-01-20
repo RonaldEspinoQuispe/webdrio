@@ -30,10 +30,6 @@
            npm cache clean --force
            npm install
 
-       - name: Run WebDriverIO tests
-         run: |
-           npx wdio run wdio.conf.ts
-
        - name: Give execution permissions to wdio
          run: chmod +x ./node_modules/.bin/wdio
 
@@ -42,3 +38,7 @@
 
        - name: Verify installed packages
          run: ls -l ./node_modules/.bin
+
+       - name: Run WebDriverIO tests
+         run: |
+           npx wdio run wdio.conf.ts
