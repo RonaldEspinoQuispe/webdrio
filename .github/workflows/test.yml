@@ -31,4 +31,7 @@
 
        - name: Run WebDriverIO tests
          run: |
-           npx wdio run wdio.conf.js
+           npx wdio run wdio.conf.ts
+           
+       - name: Give execution permissions to wdio
+         run: chmod +x ./node_modules/.bin/wdio
