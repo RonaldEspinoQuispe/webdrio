@@ -50,7 +50,7 @@
           #npx allure open
 
        - name: Upload Allure report as artifact
-         uses: actions/upload-artifact@v3
+         uses: actions/upload-artifact@v4
          with:
            name: allure-report
-           path: allure-results   # Subir el reporte generado como artefacto
+           path: reports/allure/allure-report/   # Subir el reporte generado como artefacto
