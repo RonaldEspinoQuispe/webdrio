@@ -49,8 +49,8 @@
           
        - name: Start Allure server (Docker)
          run: |
-           docker pull frankesc/docker-allure-server
-           docker run -d -p 5050:5050 -v $(pwd)/allure-report:/app/allure-report frankesc/docker-allure-server
+           docker pull allure-framework/allure2
+           docker run -d -p 5050:8080 -v $(pwd)/allure-report:/opt/allure/allure-report allure-framework/allure2
      
        - name: Wait for Allure server to start
          run: sleep 10  # Espera para que el servidor se inicie
