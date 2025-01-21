@@ -49,8 +49,8 @@
           
        - name: Start Allure server (Docker)
          run: |
-           docker pull allureui/allure-docker-service:latest
-           docker run -d -p 5050:80 -v $(pwd)/allure-report:/app/allure-report allureui/allure-docker-service:latest
+           docker pull allure-framework/allure-commandline:latest
+           docker run -d -p 5050:8080 -v $(pwd)/allure-report:/allure-report allure-framework/allure-commandline:latest serve /allure-report
 
        - name: Wait for Allure server to start
          run: sleep 10  # Espera para que el servidor se inicie
